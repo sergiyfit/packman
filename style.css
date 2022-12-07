@@ -1,0 +1,313 @@
+:root{
+    --packman--size: 50px;
+    --dot--diameter: 10px;
+
+
+
+    --start-point: calc(var(--packman--size) / 2 - var(--dot--diameter) / 2);
+    --shift--width: calc((100vw - var(--packman--size)) / 10);    
+    --shift--height: calc((100vh - var(--packman--size)) / 10);
+
+}
+
+body{
+    margin: 0;
+    overflow: hidden;
+}
+.packman{
+    position: absolute;
+
+    border-radius: 50%;
+    background-color: orange;
+    clip-path: polygon(0 0 , 100% 0, 100% 0, 50% 50%,  100% 100% , 100% 100% , 0 100%);
+    width: var(--packman--size);
+    height: var(--packman--size);
+    animation: omnonom 0.2s linear alternate infinite, moving 20s linear infinite;
+
+    z-index: 1;
+}
+
+.dots{
+    position: absolute;
+
+    width: var(--dot--diameter);
+    height: var(--dot--diameter);
+
+    background-color: blue;
+
+    border-radius: 50%;
+
+    animation: doteating 20s linear infinite;
+
+}
+
+.container{
+    position: relative;
+    height: 100vh;
+    
+}
+
+.dots:first-child {
+    top: var(--start-point) ;
+    left: var(--start-point) ;
+    
+}
+.dots:nth-child(2) {
+    top: var(--start-point) ;
+    left: calc(var(--shift--width) + var(--start-point));
+    animation-delay: 0.5s;
+}
+.dots:nth-child(3) {
+    top: var(--start-point) ;
+    left: calc(var(--shift--width) * 2 + var(--start-point));
+    animation-delay: 1s;
+}
+.dots:nth-child(4) {
+    top: var(--start-point) ;
+    left: calc(var(--shift--width) * 3 + var(--start-point));
+    animation-delay: 1.5s;
+}
+.dots:nth-child(5) {
+    top: var(--start-point) ;
+    left: calc(var(--shift--width) * 4 + var(--start-point));
+    animation-delay: 2s;
+}
+.dots:nth-child(6) {
+    top: var(--start-point) ;
+    left: calc(var(--shift--width) * 5 + var(--start-point));
+    animation-delay: 2.5s;
+}
+.dots:nth-child(7) {
+    top: var(--start-point) ;
+    left: calc(var(--shift--width) * 6 + var(--start-point));
+    animation-delay: 3s;
+}
+.dots:nth-child(8) {
+    top: var(--start-point) ;
+    left: calc(var(--shift--width) * 7 + var(--start-point));
+    animation-delay: 3.5s;
+}
+.dots:nth-child(9) {
+    top: var(--start-point) ;
+    left: calc(var(--shift--width) * 8 + var(--start-point));
+    animation-delay: 4s;
+}
+.dots:nth-child(10) {
+    top: var(--start-point) ;
+    left: calc(var(--shift--width) * 9 + var(--start-point));
+    animation-delay: 4.5s;
+}
+/*------------------------------------------------------------------------------------------------------*/
+.dots:nth-child(11) {
+    top: var(--start-point) ;
+    right: var(--start-point) ;
+    animation-delay: 5s;
+}
+.dots:nth-child(12) {
+    top: calc(var(--start-point) + var(--shift--height));
+    right: var(--start-point) ;
+    animation-delay: 5.5s;
+}
+.dots:nth-child(13) {
+    top: calc(var(--start-point) + var(--shift--height) * 2);
+    right: var(--start-point) ;
+    animation-delay: 6s;
+}
+.dots:nth-child(14) {
+    top: calc(var(--start-point) + var(--shift--height) * 3);
+    right: var(--start-point) ;
+    animation-delay: 6.5s;
+}
+.dots:nth-child(15) {
+    top: calc(var(--start-point) + var(--shift--height) * 4);
+    right: var(--start-point) ;
+    animation-delay: 7s;
+}
+.dots:nth-child(16) {
+    top: calc(var(--start-point) + var(--shift--height) * 5);
+    right: var(--start-point) ;
+    animation-delay: 7.5s;
+}
+.dots:nth-child(17) {
+    top: calc(var(--start-point) + var(--shift--height) * 6);
+    right: var(--start-point) ;
+    animation-delay: 8s;
+}
+
+.dots:nth-child(18) {
+    top: calc(var(--start-point) + var(--shift--height) * 7);
+    right: var(--start-point) ;
+    animation-delay: 8.5s;
+}
+.dots:nth-child(19) {
+    top: calc(var(--start-point) + var(--shift--height) * 8);
+    right: var(--start-point) ;
+    animation-delay: 9s;
+}
+.dots:nth-child(20) {
+    top: calc(var(--start-point) + var(--shift--height) * 9);
+    right: var(--start-point) ;
+    animation-delay: 9.5s;
+}
+/* /-------------------------------------------------------------------------------/ */
+.dots:nth-child(21) {
+    right: var(--start-point) ;
+    bottom: var(--start-point) ;
+    animation-delay: 10s;
+}
+.dots:nth-child(22) {
+    bottom: var(--start-point) ;
+    right: calc(var(--shift--width) + var(--start-point));
+    animation-delay: 10.5s;
+}
+.dots:nth-child(23) {
+    bottom: var(--start-point) ;
+    right: calc(var(--shift--width) * 2 + var(--start-point));
+    animation-delay: 11s;
+}
+.dots:nth-child(24) {
+    bottom: var(--start-point) ;
+    right: calc(var(--shift--width) * 3 + var(--start-point));
+    animation-delay: 11.5s;
+}
+.dots:nth-child(25) {
+    bottom: var(--start-point) ;
+    right: calc(var(--shift--width) * 4 + var(--start-point));
+    animation-delay: 12s;
+}
+.dots:nth-child(26) {
+    bottom: var(--start-point) ;
+    right: calc(var(--shift--width) * 5 + var(--start-point));
+    animation-delay: 12.5s;
+}
+.dots:nth-child(27) {
+    bottom: var(--start-point) ;
+    right: calc(var(--shift--width) * 6 + var(--start-point));
+    animation-delay: 13s;
+}
+.dots:nth-child(28) {
+    bottom: var(--start-point) ;
+    right: calc(var(--shift--width) * 7 + var(--start-point));
+    animation-delay: 13.5s;
+}
+.dots:nth-child(29) {
+    bottom: var(--start-point) ;
+    right: calc(var(--shift--width) * 8 + var(--start-point));
+    animation-delay: 14s;
+}
+.dots:nth-child(30) {
+    bottom: var(--start-point) ;
+    right: calc(var(--shift--width) * 9 + var(--start-point));
+    animation-delay: 14.5s;
+}
+/*-------------------------------------------------------------------------------------------------------*/
+.dots:nth-child(31) {
+    bottom: var(--start-point) ;
+    left: var(--start-point) ;
+    animation-delay: 15s;
+}
+.dots:nth-child(32) {
+    bottom: calc(var(--start-point) + var(--shift--height));
+    left: var(--start-point) ;
+    animation-delay: 15.5s;
+}
+.dots:nth-child(33) {
+    bottom: calc(var(--start-point) + var(--shift--height) * 2);
+    left: var(--start-point) ;
+    animation-delay: 16s;
+}
+.dots:nth-child(34) {
+    bottom: calc(var(--start-point) + var(--shift--height) * 3);
+    left: var(--start-point) ;
+    animation-delay: 16.5s;
+}
+.dots:nth-child(35) {
+    bottom: calc(var(--start-point) + var(--shift--height) * 4);
+    left: var(--start-point) ;
+    animation-delay: 17s;
+}
+.dots:nth-child(36) {
+    bottom: calc(var(--start-point) + var(--shift--height) * 5);
+    left: var(--start-point) ;
+    animation-delay: 17.5s;
+}
+.dots:nth-child(37) {
+    bottom: calc(var(--start-point) + var(--shift--height) * 6);
+    left: var(--start-point) ;
+    animation-delay: 18s;
+}
+.dots:nth-child(38) {
+    bottom: calc(var(--start-point) + var(--shift--height) * 7);
+    left: var(--start-point) ;
+    animation-delay: 18.5s;
+}
+.dots:nth-child(39) {
+    bottom: calc(var(--start-point) + var(--shift--height) * 8);
+    left: var(--start-point) ;
+    animation-delay: 19s;
+}
+.dots:nth-child(40) {
+    bottom: calc(var(--start-point) + var(--shift--height) * 9);
+    left: var(--start-point) ;
+    animation-delay: 19.5s;
+}
+
+
+
+@keyframes doteating{
+    0%{
+        opacity: 0;
+    }
+    80%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes omnonom {
+    100%{
+        clip-path: polygon(0 0 , 100% 0, 100% 50%, 50% 50%,  100% 50% , 100% 100% , 0 100%);
+    }
+}
+
+@keyframes moving {
+    0%,
+    100%{
+        left:0px;
+        top:0px;
+        transform: rotate(0deg);
+    }
+    24%{
+        transform: rotate(0deg);
+    }
+    25%{
+        left:calc(100% - var(--packman--size));
+        top:0px;
+        transform: rotate(90deg);
+    }
+    49%{
+        transform: rotate(90deg);
+    }
+    50%{
+        left:calc(100% - var(--packman--size));
+        top:calc(100% - var(--packman--size));
+        transform: rotate(180deg);
+    }
+    74%{
+        transform: rotate(180deg);
+    }
+    75%{
+        left:0px;
+        top:calc(100% - var(--packman--size));
+        transform: rotate(270deg);
+    }
+    99%{
+        transform: rotate(270deg);
+    }
+    99.01%{
+        transform: rotate(-90deg);
+
+    }
+}
